@@ -1,0 +1,74 @@
+#root{
+  position: relative;
+}
+.mainDiv {
+  display: flex;
+  height: 99vh;
+  flex-direction: row;
+  align-items: flex-start;
+  background-color: #201e1e;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  width: 100%;
+}
+.listMsg {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  list-style-type: none;
+  position: absolute;
+  gap: 20px;
+}
+
+.author {
+  color: rgb(209, 181, 146);
+  align-self: flex-end;
+}
+.messageBlock {
+  display: flex;
+  border: 1px solid #fff;
+  padding: 10px;
+  box-sizing: content-box;
+  height: auto;
+  background-color: grey;
+  border-radius: 20px;
+  flex-direction: column;
+  color:cornsilk ;
+  animation-duration: 2s;
+  animation-name: slidein;
+  
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+.messageLink{
+  width: 350px;
+}
+.message{
+  border-radius: 10px;
+  width: 250px;
+  height: 50px;
+  text-align: end;
+  
+}
+.inputEl{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  top: 30%;
+  right: 50%;
+}
+.authorInput{
+  text-align: end;
+  margin: 10px 0;
+}
