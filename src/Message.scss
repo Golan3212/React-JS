@@ -1,0 +1,16 @@
+.messageBlock{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(3, 22, 22);
+    height: 55vh;
+    align-items: center;
+    transition: width 1s, height 1s, background-color 1s, transform 1s;
+    &:hover{
+        transform: scale(0.3);
+}
+}
+.message{
+font-size: 40px;
+color: bisque;
+font-weight: bold;
+}
