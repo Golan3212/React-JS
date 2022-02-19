@@ -1,0 +1,88 @@
+#root{
+  position: relative;
+}
+.mainDiv {
+  display: flex;
+  min-height: 99vh;
+  align-items: center;
+  background-color: #27484e;
+  justify-content: space-around;
+  align-content: center;
+  width: 100%;
+  flex-direction: row;
+}
+.listMsg {
+  background-color: #43656b;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  list-style-type: none;
+  // position: absolute;
+  gap: 20px;
+  border: 2px solid rgb(139, 132, 90);
+  min-height: 500px;
+  min-width: 350px;
+  right: 20px;
+  border-radius: 20px;
+  padding: 10px;
+  overflow: auto;
+  overflow-wrap: break-word;
+}
+
+.author {
+  color: rgb(209, 181, 146);
+  align-self: flex-end;
+}
+.messageBlock {
+  display: flex;
+  border: 1px solid #fff;
+  padding: 10px;
+  box-sizing: content-box;
+  height: auto;
+  background-color: grey;
+  border-radius: 20px;
+  flex-direction: column;
+  color:cornsilk ;
+  animation-duration: 0.7s;
+  animation-name: slidein;
+  overflow-wrap: break-word;
+  
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+.messageLink{
+  width: 350px;
+}
+.message{
+  border-radius: 10px;
+  width: 250px;
+  height: 50px;
+  text-align: end;
+  
+}
+.inputEl{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.authorInput{
+  text-align: end;
+  margin: 10px 0;
+  color: #fff;
+}
+.inputText{
+  width: 400px;
+}
+.MuiBox-root{
+  border-radius: 10px;
+}
