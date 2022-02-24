@@ -42,7 +42,7 @@ const Chats = (props) => {
                 <ChatList chats={chats} />
             </div>
             <Paper>
-                <MessageList messages={chats[chatId].messages} />
+                <MessageList messages={chats[chatId]?.messages} />
             </Paper>
 
         </div>
