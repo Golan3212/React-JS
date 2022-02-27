@@ -1,0 +1,165 @@
+#root {
+  position: relative;
+}
+.navigation {
+  display: flex;
+  list-style-type: none;
+  gap: 15px;
+  position: relative;
+  width: 1050px;
+}
+.navigation-link {
+  text-decoration: none;
+  color: aquamarine;
+}
+.mainDiv {
+  display: flex;
+  min-height: 99vh;
+  background-color: #27484e;
+  width: 100%;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  justify-content: center;
+  padding: 45px 0;
+}
+.container {
+  width: 1140px;
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+.listMsg {
+  background-color: #43656b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  list-style-type: none;
+  gap: 20px;
+  border: 2px solid #8b845a;
+  height: 500px;
+  right: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  overflow: auto;
+  width: 400px;
+}
+
+.author {
+  color: rgb(209, 181, 146);
+  align-self: flex-end;
+  display: block;
+  display: flex;
+  gap: 15px;
+}
+.messageBlock {
+  display: flex;
+  border: 1px solid #fff;
+  padding: 10px;
+  box-sizing: content-box;
+  height: auto;
+  background-color: grey;
+  border-radius: 20px;
+  flex-direction: column;
+  color: cornsilk;
+  animation-duration: 0.7s;
+  animation-name: slidein;
+  overflow-wrap: break-word;
+}
+@keyframes slidein {
+  from {
+    transform: scale(2, 0.1);
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    transform: scale(1, 1);
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+.messageLink {
+  width: 350px;
+}
+.message {
+  border-radius: 10px;
+  width: 250px;
+  height: 50px;
+  text-align: end;
+}
+.inputEl {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.authorInput {
+  text-align: end;
+  margin: 10px 0;
+  color: #fff;
+}
+.inputText {
+  width: 400px;
+}
+.css-144ebsl {
+  display: flex;
+  flex-direction: column;
+  line-height: 50px;
+  font-weight: 700;
+  padding: 25px;
+  max-width: 200px !important;
+  background-color: rgb(53, 58, 57);
+  border-radius: 15px;
+  height: fit-content;
+}
+.posAbs {
+  position: absolute;
+  top: 20px;
+  left: 50px;
+  overflow: auto;
+  margin-bottom: 10px;
+}
+.messageList {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 50px;
+}
+.css-jkymtx-MuiPaper-root {
+  background-color: #27484e !important;
+  border-radius: 10px !important;
+}
+.profileNav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-weight: 900;
+  line-height: 0%;
+}
+.element {
+  width: 120px;
+  height: 120px;
+  color: white;
+  text-align: center;
+  line-height: 120px;
+  -webkit-animation: rotate 6s linear infinite;
+  animation: rotate 6s linear infinite;
+}
+
+
+@keyframes rotate {
+  100% {-webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+    transform: rotate(360deg);}
+}
+
+.showedName{
+  position: absolute;
+  width: auto;
+  top: 50px;
+  left: 100px;
+  font-size: 40px;
+  color: rgb(17, 160, 165);
+  -webkit-transform-origin: 50px 50px;
+  -ms-transform-origin: 50px 50px;
+  transform-origin: 50px 50px;
+}
