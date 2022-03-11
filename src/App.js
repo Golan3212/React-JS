@@ -7,6 +7,7 @@ import Profile from './pages/Profile';
 import Layout from './constants/Layout';
 import NoMatch from './pages/NoMatch';
 import Chats from './pages/Chats';
+import Gists from './pages/Gists';
 
 
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/chats/:chatId/*" element={<Chats />} />
           <Route path="/chats/*" element={<Chats />} />
+          <Route path="/gists" element={<Gists />} />
           <Route path="*" element={<NoMatch />} />
           <Route />
         </Routes>
