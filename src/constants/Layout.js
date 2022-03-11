@@ -9,10 +9,13 @@ function Layout() {
                         <Link className="navigation-link" to="/">Home</Link>
                     </li>
                     <li>
-                        <Link className="navigation-link" to="/Profile">Profile</Link>
+                        <Link className="navigation-link" to="/profile">Profile</Link>
                     </li>
                     <li>
-                        <Link className="navigation-link" to="/Chats"> Chats   </Link>
+                        <Link className="navigation-link" to="/chats"> Chats   </Link>
+                    </li>
+                    <li>
+                        <Link className="navigation-link" to="/gists"> Gists   </Link>
                     </li>
                     <li>
                         <Link className="navigation-link" to="/nothing-here">Nothing Here</Link>
