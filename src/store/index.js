@@ -5,11 +5,13 @@ import messagesReducer from "./messages/reducer";
 import profileReducer from "./profile/reducer";
 import storage from "redux-persist/lib/storage";
 import {persistReducer, persistStore} from "redux-persist";
+import gistsReducer from "./gists/reducer";
 
 const reducers = combineReducers({
     chats: chatsReducer,
     messages: messagesReducer,
-    profile: profileReducer
+    profile: profileReducer,
+    gists: gistsReducer
 })
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE || compose;

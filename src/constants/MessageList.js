@@ -1,9 +1,10 @@
 import '../App.scss';
-import React from 'react';
-import {useSelector} from 'react-redux'
+import React, { useEffect } from 'react';
+import {useDispatch, useSelector} from 'react-redux'
 import { List, ListItem} from '@mui/material';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import {useParams} from 'react-router-dom'
+import { getMessagesByChatIdWithFB } from '../store/middleware';
 
 
 
@@ -13,6 +14,12 @@ const MessageList = () => {
   const {chatId} = useParams();
  const allMessages = useSelector(state => state.messages.messageList);
  const messages = allMessages[chatId];
+ const dispatch = useDispatch();
+
+ useEffect(() => {
+   dispatch(getMessagesByChatIdWithFB(chatId));
+
+ }, [chatId]);
  
 
     return (
@@ -79,5 +86,5 @@ const MessageList = () => {
     // )
 }
 
-export default MessageList
+export default MessageList;
 

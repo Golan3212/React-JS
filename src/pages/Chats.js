@@ -10,7 +10,7 @@ import Stack from '@mui/material/Stack';
 import DeleteIcon from '@mui/icons-material/Delete';
 import SendIcon from '@mui/icons-material/Send';
 import { useDispatch, useSelector } from "react-redux";
-import { addMessageWithThunk} from "../store/messages/actions.js"
+import { addMessageWithFB } from "../store/middleware";
 
 
 const Chats = () => {
@@ -29,7 +29,7 @@ const Chats = () => {
                 text: value,
                 author: name
             }
-            dispatch(addMessageWithThunk(chatId, message));
+            dispatch(addMessageWithFB(chatId, message));
             setValue('');
         }
        
