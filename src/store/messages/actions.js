@@ -1,4 +1,5 @@
 export const ADD_MESSAGE = 'MESSAGES::ADD_MESSAGE';
+export const UPDATE_MESSAGE = 'MESSAGES::UPDATE_MESSAGE';
 
 export const addMessage = (chatId, message) => ({
     type: ADD_MESSAGE,
@@ -22,3 +23,9 @@ export const addMessageWithThunk = (chatId, message) => (dispatch, getState) => 
         }, 1500);
     }
 }
+
+export const updateMessages = (chatId, messages) => ({
+    type: UPDATE_MESSAGE,
+    chatId,
+    messages
+})
