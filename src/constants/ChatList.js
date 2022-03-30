@@ -1,12 +1,12 @@
 
 import { Button, Dialog, TextField } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
-import { addChat, deleteChat } from '../store/chats/actions';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 import '../App.scss'
+import { addChatWithFB, deleteChatWithFB, initTrackerWithFB } from "../store/middleware";
 
 
 const ChatList = () => {
@@ -17,30 +17,34 @@ const ChatList = () => {
     const dispatch = useDispatch();
 
     const handleOpen = () => {
-        setVisible(true)
+        setVisible(true);
     }
 
     const onDeleteChat = (index)=> {
-        dispatch(deleteChat(index));
+        dispatch(deleteChatWithFB(index));
     }
     const handleChange = (event) => {
         setChatName(event.target.value)
     }
 
     const onAddChat = () => {
-        dispatch(addChat(chatName));
+       dispatch(addChatWithFB(chatName));
         setChatName('');
         setVisible(false)
     }
+
+    useEffect(() => {
+        dispatch(initTrackerWithFB());
+    }, [dispatch])
 
 
     return <div className="css-144ebsl">
         {chats?.map((chat, index) => (
             <div className="chatList">
-                <Link className="navigation-link " to={`/chats/${chat.id}`} key={`${index}chat`}>
+                <Link className="navigation-link " to={`/chats/${chat.id}`} key={`${chat.id}`}>
                     {chat.name}
                 </Link>
-                <IconButton onClick={() => {onDeleteChat(index)}} aria-label="delete" size="small">
+                <IconButton onClick={() => {onDeleteChat(chat.id)}} aria-label="delete" size="small">
                     <DeleteIcon fontSize="inherit" />
                 </IconButton>
             </div>
